@@ -5,29 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: 'tab1.page.html',
   styleUrls: ['tab1.page.scss']
 })
-export class Tab1Page {
+export class Tab1Page { }
+    
+  
 
-  public actionSheetButtons = [
-    {
-      text: 'Delete',
-      role: 'destructive',
-      data: {
-        action: 'delete',
-      },
-    },
-    {
-      text: 'Share',
-      data: {
-        action: 'share',
-      },
-    },
-    {
-      text: 'Cancel',
-      role: 'cancel',
-      data: {
-        action: 'cancel',
-      },
-    },
-  ];
 
-}
