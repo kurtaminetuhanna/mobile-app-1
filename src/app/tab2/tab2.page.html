@@ -1,66 +1,49 @@
 <ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      loginscreen
-    </ion-title>
+    <ion-title></ion-title>
   </ion-toolbar>
   <ion-buttons slot="start">
-    <ion-back-button defaultHref="login" text=""></ion-back-button>
+    <ion-back-button defaulthref="login" text=""></ion-back-button>
   </ion-buttons>
 </ion-header>
-
-<ion-content >
-  <ion-card class="ion-no-margin">
-    <ion-img src="assets/images/header1.png"></ion-img>
- 
-  <ion-card-content>
-    <form[formGroup]="validationFormUser"(ngSubmit)="LoginUser(validationFormUser.value)">
-    <div class="wrapform">
-      <ion-item>
-        
-        <ion-icon name="mail-outline"></ion-icon>
-        <ion-input type="text" name="email"[(ngModel)] ="email" placeholder="Email"required>
-          
-        </ion-input>
-      </ion-item>
-
-      <div>
-        <ng-container *ngFor="let validation of validationUserMessage.email">
-          <div class="error_message" *ngIf="validationFormUser.get('email').hasError(validation.type) && (validationFormUser.get('email').dirty || validationFormUser.get('email').touched)">
-             {{validation.message}}
-          </div>
-        </ng-container>
-      </div>
-
-
-      <ion-item>
-       
-        <ion-icon name="lock-closed"></ion-icon>
-        <ion-input type="password" name="password" placeholder="Email"[(ngModel)] ="password" required>
-          
-        </ion-input>
-      </ion-item>
-      <div>
-        <ng-container *ngFor="let validation of validationUserMessage.password">
-             <div class="error_message" *ngIf="validationFormUser.get('password').hasError(validation.type) && (validationFormUser.get('password').dirty || validationFormUser.get('password').touched)">
-                {{validation.message}}
-             </div>
-         </ng-container>
-    </div>
-
-    </div>
-    <div class="password_forgot">
-
-      <ion-button fill="clear" class="ion-no-padding">ForgotPasword?</ion-button>
-    </div>
-    <div class="sign-btn-wrap">
-      <ion-button shape="round" type="submit" fill="solid" class="sign-btn"[disabled]="!validationFormUser.valid">Login</ion-button>
+<ion-content>
+<ion-card class="ion-no-margin">
+  <ion-img src="assets/images/header1.png"></ion-img>
+</ion-card>
+<ion-card-content>
+  <div class="wrapform">
+    <ion-item>
+      <ion-icon  name="mail-outline"></ion-icon>
       
-    </div>
-    <div class="text-tag">
-      <span>Or via Social Media</span>
-      </div>
+      <ion-input type="text" name="email"
+      [(ngModel)]="email" 
+      placeholder="Email" required>
+
+      </ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon  name="lock-closed-outline"></ion-icon>
       
+      <ion-input type="password"name="password"
+      [(ngModel)]="password" 
+      placeholder="************" required>
+
+      </ion-input>
+    </ion-item>
+
+  </div>
+  <div class="password_forgot">
+    <ion-button fiil="clear"class="ion-no-padding">ForgetPassword?</ion-button>
+  </div>
+  <div class="sign-btn-wrap">
+    <ion-button shape="round"fiil="solid"class="sign-btn">Login</ion-button>
+  </div>
+  <div class="text-tag">
+    <span>Or via Social Media</span>
+  </div>
+
+
+
   <div class="social-btns">
     <ion-button fill="clear" class="facebook ion-no-padding">
     <ion-img src="assets/images/facebook.png"></ion-img>
@@ -71,19 +54,6 @@
       <ion-button fill="clear" class="applebtn ion-no-padding">
         <ion-img src="assets/images/apple.png"></ion-img>
         </ion-button>
-    
-    </div>
-    </form>
-
-  </ion-card-content>
-</ion-card>
-
-<ion-footer class="ion-no-border">
-  <span>Don't have an account?</span>
-  <button class="ion-no-padding">Sign Up</button>
-</ion-footer>
-
-
+  </div>
+</ion-card-content>
 </ion-content>
-
-
